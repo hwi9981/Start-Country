@@ -1,5 +1,61 @@
 # Start Country
-Thông tin quốc gia của người dùng khi tải ứng dụng
+The language the user's operating system is running in
+### The simplest and easiest way
+use Application.systemLanguage. It's data type is an enum in unity library
+```csharp
+namespace UnityEngine
+{
+    public enum SystemLanguage
+    {
+        Afrikaans = 0,
+        Arabic = 1,
+        Basque = 2,
+        Belarusian = 3,
+        Bulgarian = 4,
+        Catalan = 5,
+        Chinese = 6,
+        Czech = 7,
+        Danish = 8,
+        Dutch = 9,
+        English = 10,
+        Estonian = 11,
+        Faroese = 12,
+        Finnish = 13,
+        French = 14,
+        German = 15,
+        Greek = 16,
+        Hebrew = 17,
+        Hugarian = 18,
+        Hungarian = 18,
+        Icelandic = 19,
+        Indonesian = 20,
+        Italian = 21,
+        Japanese = 22,
+        Korean = 23,
+        Latvian = 24,
+        Lithuanian = 25,
+        Norwegian = 26,
+        Polish = 27,
+        Portuguese = 28,
+        Romanian = 29,
+        Russian = 30,
+        SerboCroatian = 31,
+        Slovak = 32,
+        Slovenian = 33,
+        Spanish = 34,
+        Swedish = 35,
+        Thai = 36,
+        Turkish = 37,
+        Ukrainian = 38,
+        Vietnamese = 39,
+        ChineseSimplified = 40,
+        ChineseTraditional = 41,
+        Hindi = 42,
+        Unknown = 43,
+    }
+}
+```
+# Other way
 ### Demo Code
 ```csharp
 using System.Globalization;
@@ -17,8 +73,8 @@ public class CountryInfo : MonoBehaviour
 }
 ```
 ### Demo Code
-Tìm quốc gia thông qua mã ngôn ngữ (LCID)
-Tạo 1 scriptableobject đã nhập sẵn mã để sử dụng
+Find country by language code (LCID)
+Create a scriptableobject with a pre-filled code to use
 ```csharp
 using System.Collections;
 using System.Collections.Generic;
@@ -42,8 +98,7 @@ public class CountryData : ScriptableObject
     }
 }
 ```
-
-Sử dụng cho chọn cờ mặc định, skin mặc định, ...
+Used for selecting default flag, default skin, ...
 ```csharp
 using System.Globalization;
 using UnityEngine;
@@ -57,9 +112,9 @@ public class StartCountry : MonoBehaviour
     }
 }
 ```
-### Mã 1 số quốc gia
+### Country code
   
-  | Quốc gia                    | Mã quốc gia                                             |
+  | Country                   | Country code                                             |
 | ---------------------------------- | ---------------------------------------------------- |
 United States	| 1033
 United Kingdom	|	2057
